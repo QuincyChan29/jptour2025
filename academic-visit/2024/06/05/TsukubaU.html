@@ -252,6 +252,36 @@
                         margin-left: auto;
                         margin-right: auto;
                     }
+
+                    .image-row {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                        /* Adjusts spacing around items */
+                        margin-bottom: 20px;
+                        /* Adds some space between rows */
+                    }
+
+                    figure {
+                        flex: 1 1 48%;
+                        /* Occupies almost half of the container, adjusts during wrap */
+                        margin: 0 1%;
+                        /* Spacing between two figures */
+                        text-align: center;
+                        /* Centers the image and caption */
+                    }
+
+                    figcaption {
+                        color: #666;
+                        font-size: 0.9em;
+                        margin-top: 10px;
+                        /* Space between image and caption */
+                    }
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
                 </style>
                 <div class="">
                     <div class="cityu-content content-color-default">
@@ -305,18 +335,26 @@
                         impressive presentations given by our host and took a group photo before departing with them.
 
                     </p>
-                    <div id="banner">
-                        <div class="inline-block">
-                            <img src="../../../..//assets/img/contents/TsukubaU/04.jpg">
-                        </div>
+                    <div class="image-row">
+                        <figure>
+                            <img src="../../../..//assets/img/contents/TsukubaU/08.jpg">
+                            <figcaption>Prof. Zhang Yongbing </figcaption>
+                        </figure>
 
-                        <div class="inline-block">
+                        <figure>
                             <img src="../../../..//assets/img/contents/TsukubaU/05.jpg">
-                        </div>
-
-                        <div class="inline-block">
+                            <figcaption>Prof. Yasunori Futamura</figcaption>
+                        </figure>
+                    </div>
+                    <div class="image-row">
+                        <figure>
                             <img src="../../../..//assets/img/contents/TsukubaU/06.jpg">
-                        </div>
+                            <figcaption>Prof. Claus Aranha</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../../../..//assets/img/contents/TsukubaU/04.jpg">
+                            <figcaption>Prof. Xiucai Ye</figcaption>
+                        </figure>
                     </div>
                     <p>
                         <img src="../../../..//assets/img/contents/TsukubaU/07.jpg" alt="" />
