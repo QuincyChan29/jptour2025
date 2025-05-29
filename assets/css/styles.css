@@ -6,6 +6,10 @@
 @import "https://template.cityu.edu.hk/template/v2/css/aos/aos.css";
 @import "https://template.cityu.edu.hk/template/v2/css/animate.css/animate.min.css";
 
+/*for comments-carousel*/
+@import "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css";
+@import "comments-carousel.css";
+
 .markdown a::after{
     font-family: "Material Icons";
     content: ' \e89e';
