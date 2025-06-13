@@ -4,16 +4,15 @@
 <head>
     <meta charset="utf-8" />
     <title>
-        Pre-departure Briefing | Japan Visit 2025 (CS) | City University of Hong
-        Kong
+        {}| Japan Visit 2025 (CS) | City University of Hong Kong
     </title>
     <link rel="icon" type="image/x-icon" href="https://www.cityu.edu.hk/favicon.ico" />
-    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../../..//assets/css/styles.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="author" content="City University of Hong Kong" />
     <meta name="description"
-        content=" Pre-departure Briefing | Japan Visit 2025 (CS) | City University of Hong Kong" />
+        content="{}| Japan Visit 2025 (CS) | City University of Hong Kong" />
     <meta name="keywords" content="City University of Hong Kong, City University, CityU" />
     <meta name="robots" content="index, follow" />
 </head>
@@ -27,13 +26,6 @@
             <!-- Header : Large screen -->
             <div class="cityu-header-lg d-none d-lg-block">
                 <div class="d-flex flex-row">
-                    <!-- Department logo only -->
-                    <!--div class="cityu-header-logo-lg align-self-center">
-          <a href=".">
-            <img src="//template.cityu.edu.hk/template/logo/esu/esu_logo_eng_cmyk.svg" alt="Department of Accountancy">
-          </a>
-        </div-->
-
                     <!-- CityU logo and title -->
                     <div class="cityu-header-logo-lg align-self-center">
                         <a href="https://www.cityu.edu.hk" rel="noopener" target="_blank">
@@ -47,20 +39,6 @@
 
                     <!-- Tools -->
                     <div class="cityu-tools ml-auto align-self-start flex-row d-none d-lg-flex">
-                        <!-- Search box -->
-                        <!--div class="cityu-search search-color-cityured align-self-center">
-            <form method="get" action="https://www.cityu.edu.hk/cityusearch">
-              <fieldset>
-                <div class="input-group">
-                  <input class="form-control" type="text" name="q" placeholder="Search" aria-label="Search text">
-                  <input type="hidden" name="site" value="">
-                  <button class="input-group-text search-button-color-cityured" type="submit" value="" aria-label="Search button">
-                    <i class="fas fa-search"></i>
-                  </button>
-                </div>
-              </fieldset>
-            </form>
-          </div-->
                     </div>
                 </div>
             </div>
@@ -118,18 +96,6 @@
                         <a class="nav-link" href="../../../..//team.html">The Visit Team</a>
                     </li>
                 </ul>
-
-                <!-- Lang switcher : Small screen -->
-                <!--div class="container d-block d-lg-none">
-        <div class="row">
-          <div class="col-6 p-0 pe-1">
-            <a href="./" class="btn btn-light w-100 p-2">Eng</a>
-          </div>
-          <div class="col-6 p-0 ps-1">
-            <a href="./tc/" class="btn btn-light w-100 p-2">繁</a>
-          </div>
-        </div>
-      </div-->
             </div>
         </div>
     </nav>
@@ -143,18 +109,8 @@
                     <li class="breadcrumb-item">
                         <a href="../../../..//index.html">Home</a>
                     </li>
-
-                    <!--<li class="breadcrumb-item"><a href="/academic-visit/">Academic visit</a></li>-->
-
-                    <!--<li class="breadcrumb-item"><a href="/academic-visit/2025/">2025</a></li>-->
-
-                    <!--<li class="breadcrumb-item"><a href="/academic-visit/2025/06/">06</a></li>-->
-
-                    <!--<li class="breadcrumb-item"><a href="/academic-visit/2025/06/06/">06</a></li>-->
-
                     <li class="breadcrumb-item active" aria-current="page">
-                        <a href="#"> Pre-departure Briefing</a>
-                        <!--<li class="breadcrumb-item active" aria-current="page"><a href="#"> Ai lab visit at nus</a>-->
+                        <a href="#"> {Route Name}</a>
                     </li>
                 </ol>
             </nav>
@@ -169,44 +125,6 @@
             <div class="row">
                 <!-- Content -->
                 <style>
-                    #banner {
-                        display: flex;
-                        justify-content: space-around;
-                        /* Distributes space around items for better spacing */
-                        align-items: center;
-                        /* Align items vertically */
-                        flex-wrap: wrap;
-                        /* Allows items to wrap if needed */
-                        margin: 0 auto;
-                        /* Horizontally centers the container */
-                        padding: 0px;
-                        /* Padding inside the container to prevent edge sticking */
-                        max-width: 98%;
-                        /* Limits width to prevent edge sticking */
-                        box-sizing: border-box;
-                        /* Includes padding in the width calculation */
-                    }
-
-                    #banner .inline-block {
-                        flex: 1 1 auto;
-                        /* Allows flex items to grow and shrink */
-                        margin: 0px;
-                        /* Space between images */
-                        max-width: calc(50% - 10px);
-                        /* Maximum width for three images per row minus margin */
-                        box-sizing: border-box;
-                        /* Includes padding in the width calculation */
-                    }
-
-                    #banner img {
-                        width: 100%;
-                        /* Makes image width responsive */
-                        height: auto;
-                        /* Maintain aspect ratio */
-                        display: block;
-                        /* Removes bottom space/margin */
-                    }
-
                     .markdown img,
                     .markdown video {
                         max-width: 100%;
@@ -228,14 +146,27 @@
                         .markdown video {
                             max-width: 60%;
                         }
+
+                        .image-row {
+                            display: flex;
+                            justify-content: center;
+                            /* Center the images horizontally */
+                            align-items: center;
+                            /* Align images vertically */
+                            gap: 10px;
+                            /* Optional: adds space between images */
+                        }
+
                     }
 
                     /* Adjust image size for medium screens */
                     @media (min-width: 768px) and (max-width: 1023px) {
-
-                        .markdown img,
-                        .markdown video {
-                            max-width: 70%;
+                        .image-row {
+                            display: flex;
+                            overflow: scroll;
+                            /* Align images vertically */
+                            gap: 10px;
+                            /* Optional: adds space between images */
                         }
                     }
 
@@ -244,7 +175,16 @@
 
                         .markdown img,
                         .markdown video {
-                            max-width: 80%;
+                            /* max-width: 100%; */
+                            max-height: 60vw;
+                        }
+
+                        .image-row {
+                            display: flex;
+                            overflow: scroll;
+                            /* Align images vertically */
+                            gap: 10px;
+                            /* Optional: adds space between images */
                         }
                     }
 
@@ -253,6 +193,7 @@
                         margin-right: auto;
                     }
 
+                    /* Figure */
                     figure {
                         margin: 20px 0;
                         /* Adds spacing around each figure */
@@ -267,42 +208,135 @@
                         /* Smaller font size for captions */
                     }
 
-                    .image-row {
+                    .googleMap {
+                        width: 100%;
+                        border: 0;
+                        height: 40vh;
+                        max-width: 1000px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        padding: 0px;
                         display: flex;
-                        justify-content: center;
-                        /* Center the images horizontally */
-                        align-items: center;
-                        /* Align images vertically */
-                        gap: 10px;
-                        /* Optional: adds space between images */
                     }
+
                 </style>
                 <div class="">
                     <div class="cityu-content content-color-default">
-                        <h1>Pre-departure Briefing</h1>
+                        <h1>Traverse Kamakura Kokomae Station, Kotoku-in & Enoshima</h1>
                     </div>
                 </div>
                 <div class="col-md-9 markdown content-color-default">
-                    <p>
-                        On May 30th, our study tour team gathered for a pre-departure briefing at the CS Seminar Room (Y6405). The session was led by Prof. Howard Leung and Dr. Kenneth Lee, who gave us valuable insights and details about the upcoming study tour.
-                    </p>
-                    <img src="../assets/img/contents/Prepare/meeting1.webp" alt="" />
 
+                    <!-- Template -->
+
+                    <!-- Text -->
+                    <!-- <h2>Title</h2>
+                    <p>Text</p> -->
+
+                    <!-- IMG Slide -->
+                    <!-- <div class="image-row">
+                        <img src="" alt="" />
+                        <img src="" alt="" />
+                    </div> -->
+
+                    <!-- IMG Embed -->
+                    <!-- <div class="image-row">
+                        <figure>
+                            <img src="" alt="" />
+                            <figcaption>...</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="" alt="" />
+                            <figcaption>...</figcaption>
+                        </figure>
+                    </div> -->
+
+                    <!-- Map -->
+                    <!-- <iframe
+                        src=""
+                        class="googleMap" height="auto" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe> -->
+
+
+
+
+
+                    <h2>Kamakura Kokomae Station</h2>
                     <p>
-                        During the briefing, each team had the opportunity to meet and connect with their members, allowing everyone to better know each other before the trip. We also discussed the tour schedule and clarified the individual responsibilities and tasks that each student will undertake throughout the trip.
+                        We visited the Kamakura Kokomae Station, which is home to the Slam Dunk scene. The weather was
+                        pleasant and cool, allowing us to take beautiful photos without excessive sweating. And here are
+                        the pictures we took with kimono(Japanese Traditional clothes):D
+
                     </p>
-                    <img src="../assets/img/contents/Prepare/meeting2.webp" alt="" />
+                    <div class="image-row">
+                        <img src="../../../..//assets/img/contents/Kokomae/01.jpg" alt="" />
+                        <img src="../../../..//assets/img/contents/Kokomae/02.jpg" alt="" />
+                        <img src="../../../..//assets/img/contents/Kokomae/03.jpg" alt="" />
+                    </div>
+                    <h2>Kotoku-in</h2>
+                    <p>
+                        After the station, we went to the Kotoku-in, a temple with a giant bronze Buddha statue. Since
+                        it's now June, the hydrangeas are in full bloom, making it an ideal time for a temple visit and
+                        flower viewing.
+                    </p>
+                    <div class="image-row">
+                        <img src="../../../..//assets/img/contents/Kokomae/04.jpg" alt="" />
+                        <img src="../../../..//assets/img/contents/Kokomae/05.jpg" alt="" />
+                        <img src="../../../..//assets/img/contents/Kokomae/06.jpg" alt="" />
+                    </div>
+                    <h2>Enoshima</h2>
+                    <p>
+                        Our final stop was Enoshima, an island just a 15-minute walk from Enoshima Station. This is a
+                        great time of year to visit, as the Flore Garden at the top of the hill near the sea is in bloom
+                        from May to July. Enoshima is known for its fresh seafood, as it is situated next to the Pacific
+                        Ocean. We were able to enjoy the freshest sashimi and other marine delicacies.
+
+                    </p>
+                        <img src="../../../..//assets/img/contents/Kokomae/07.jpg" alt="" />
+                        <video controls autoplay muted loop>
+                            <source src="../../../..//assets/img/contents/Kokomae/08.mp4" type="video/mp4">
+
+                            Your browser does not support the video tag.
+                        </video>
+                        <video controls autoplay muted loop>
+                            <source src="../../../..//assets/img/contents/Kokomae/09.mp4" type="video/mp4">
+
+                            Your browser does not support the video tag.
+                        </video>
+
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d486.34667277808336!2d114.17296300623232!3d22.336403693102785!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340407368e03f56b%3A0xba255ea0c421911a!2sDepartment%20of%20Computer%20Science!5e0!3m2!1sen!2sus!4v1748776444516!5m2!1sen!2sus"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49067.69929493373!2d139.50418568390006!3d35.33627052017112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018459b80ac5619%3A0x5700747a399f2502!2sKamakura%2C%20Kanagawa%2C%20Japan!5e0!3m2!1sen!2shk!4v1718302688457!5m2!1sen!2shk"
+                        class="googleMap" height="auto" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5446.852409753914!2d139.52747469994665!3d35.31171559302692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601845f4077127d5%3A0x57eb6150baf7add1!2sHasedera!5e0!3m2!1sen!2shk!4v1718302754524!5m2!1sen!2shk"
                         width="100%" height="auto" style="
-                  border: 0;
-                  height: 40vh;
-                  max-width: 1000px;
-                  margin-left: auto;
-                  margin-right: auto;
-                  padding: 0px;
-                  display: flex;
-                " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    border: 0;
+                    height: 40vh;
+                    max-width: 1000px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 0px;
+                    display: flex;
+                  " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </iframe>
+                    <!-- Figure -->
+                    <!-- <div class="image-row">
+                        <figure>
+                            <img src="../../../..//assets/img/contents/UTokyo/01.JPG" alt="" />
+                            <figcaption>Prof. Yasushi KAWASE</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../../../..//assets/img/contents/UTokyo/02.JPG" alt="" />
+                            <figcaption>Mr. Ryosuke Sato </figcaption>
+                        </figure>
+                    </div>
+
+
+
+
+
+
                 </div>
             </div>
         </div>
@@ -318,7 +352,8 @@
 
                     <li class="">
                         <a class="" href="../../../..//index.html" role="button" data-toggle="dropdown"
-                            aria-expanded="false">Japan Visit 2025 (CS)</a>
+                            aria-expanded="false">Japan
+                            Visit 2025 (CS)</a>
                         <ul class="animate__animated animate__fadeIn" style="--animate-duration: 0.5s">
                             <!-- Menu item (Link) -->
 
@@ -384,11 +419,10 @@
     </footer>
 
     <!-- Required config file -->
-    <script type="text/javascript" async=""
-        src="https://www.googletagmanager.com/gtag/js?id=G-YSL0MDS9QG&amp;l=dataLayer&amp;cx=c"></script>
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-YSL0MDS9QG&amp;l=dataLayer&amp;cx=c"></script>
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
     <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-PZF4343"></script>
-    <script src="../assets/js/cityu.config.js"></script>
+    <script src="../../../..//assets/js/cityu.config.js"></script>
 
     <!-- Required scripts -->
     <script src="https://template.cityu.edu.hk/template/v2/js/jquery/jquery.min.js"></script>
