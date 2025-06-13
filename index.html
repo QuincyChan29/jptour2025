@@ -2053,7 +2053,23 @@
               }
 
 
+              function toggleTech() {
+                if(uni.classList.contains("toggleUni")){
+                  uni.classList.toggle("toggleUni");
+                }else if(comp.classList.contains("toggleComp")){
+                  comp.classList.toggle("toggleComp");
+                }else if(cul.classList.contains("toggleCul")){
+                  cul.classList.toggle("toggleCul");
+                }
 
+
+                tech.classList.toggle("toggleTech");
+                if(tech.classList.contains("toggleTech")){
+                  showOnlyType('tech');
+                }else{
+                  showAllMarkers();
+                }
+              }
           </script>
         </div>
 
