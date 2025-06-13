@@ -1906,13 +1906,13 @@
               var kyUni = L.marker([35.026212, 135.780842], {icon: KyotoUIcon}).bindPopup("<p>Kyoto University Yoshida Campus</p><a href='./academic-visit/2024/06/04/25-KyotoU.html' class='popupbutton'>View All</a>").openPopup();
               var kanAI = L.marker([34.634845, 135.456624], {icon: KanadeviaIcon}).bindPopup("<p>Kanadevia A.I/TEC</p><a href='./academic-visit/2024/06/04/25-KanadeviaAITec.html' class='popupbutton'>View All</a>").openPopup();
               var oExpo = L.marker([34.653232111112565, 135.38297960652858], {icon: ExpoIcon}).bindPopup("<p>Osaka Expo</p><a href='#' class='popupbutton'>View All</a>").openPopup();
-              var castlePark = L.marker([34.68663899924445, 135.5262261158034], {icon: castlePIcon}).bindPopup("<p>Osaka Expo</p><a href='#' class='popupbutton'>View All</a>").openPopup();
+              var castlePark = L.marker([34.68663899924445, 135.5262261158034], {icon: castlePIcon}).bindPopup("<p>Osaka Castle Park</p><a href='#' class='popupbutton'>View All</a>").openPopup();
               
               //which attractions are visited on that day
               var dayOne = L.layerGroup([]); 
               var dayTwo = L.layerGroup([kUni, oUni]);
               var dayThree = L.layerGroup([kyUni, kanAI]);
-              var dayFour = L.layerGroup([oExpo]);
+              var dayFour = L.layerGroup([oExpo,castlePark]);
               var dayFive = L.layerGroup([]);
 
               //the main map
