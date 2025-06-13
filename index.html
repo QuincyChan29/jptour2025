@@ -1996,7 +1996,6 @@
               let uni = document.querySelector("#btn-univ");
               let comp = document.querySelector("#btn-comp");
               let cul = document.querySelector("#btn-culture");
-              let tech = document.querySelector("#btn-tech");
 
               function toggleUni() {
 
@@ -2004,8 +2003,6 @@
                   comp.classList.toggle("toggleComp");
                 }else if(cul.classList.contains("toggleCul")){
                   cul.classList.toggle("toggleCul");
-                }else if(tech.classList.contains("toggleTech")){
-                  tech.classList.toggle("toggleTech")
                 }
 
                 uni.classList.toggle("toggleUni");
@@ -2022,8 +2019,6 @@
                   uni.classList.toggle("toggleUni");
                 }else if(cul.classList.contains("toggleCul")){
                   cul.classList.toggle("toggleCul");
-                }else if(tech.classList.contains("toggleTech")){
-                  tech.classList.toggle("toggleTech")
                 }
 
                 comp.classList.toggle("toggleComp");
@@ -2039,33 +2034,12 @@
                   uni.classList.toggle("toggleUni");
                 }else if(comp.classList.contains("toggleComp")){
                   comp.classList.toggle("toggleComp");
-                }else if(tech.classList.contains("toggleTech")){
-                  tech.classList.toggle("toggleTech");
                 }
 
 
                 cul.classList.toggle("toggleCul");
                 if(cul.classList.contains("toggleCul")){
                   showOnlyType('culture');
-                }else{
-                  showAllMarkers();
-                }
-              }
-
-
-              function toggleTech() {
-                if(uni.classList.contains("toggleUni")){
-                  uni.classList.toggle("toggleUni");
-                }else if(comp.classList.contains("toggleComp")){
-                  comp.classList.toggle("toggleComp");
-                }else if(cul.classList.contains("toggleCul")){
-                  cul.classList.toggle("toggleCul");
-                }
-
-
-                tech.classList.toggle("toggleTech");
-                if(tech.classList.contains("toggleTech")){
-                  showOnlyType('tech');
                 }else{
                   showAllMarkers();
                 }
