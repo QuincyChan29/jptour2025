@@ -1435,6 +1435,27 @@
                 iconAnchor: [70, 140], // Center bottom anchor point
                 popupAnchor: [0, -140] // Popup appears above the icon
               });
+              var nintendoIcon =  L.icon({//the icon of those GPS markers
+                  iconUrl: './assets/img/gpsIcon/nintendo.png', //icon in the file path
+
+                iconSize: [140, 140],
+                iconAnchor: [70, 140], // Center bottom anchor point
+                popupAnchor: [0, -140] // Popup appears above the icon
+              });
+              var unagiIcon =  L.icon({//the icon of those GPS markers
+                  iconUrl: './assets/img/gpsIcon/unagi.png', //icon in the file path
+
+                iconSize: [140, 140],
+                iconAnchor: [70, 140], // Center bottom anchor point
+                popupAnchor: [0, -140] // Popup appears above the icon
+              });
+              var crabIcon =  L.icon({//the icon of those GPS markers
+                  iconUrl: './assets/img/gpsIcon/crab.png', //icon in the file path
+
+                iconSize: [140, 140],
+                iconAnchor: [70, 140], // Center bottom anchor point
+                popupAnchor: [0, -140] // Popup appears above the icon
+              });
 
 
                 
@@ -1453,13 +1474,16 @@
               var park70 = L.marker([34.8072235857017, 135.52893762698758], {icon: park70Icon}).bindPopup("<p>70 Commemorative Park</p><a href='./students-exploration/2025/06/03/25-EveningVisit.html' class='popupbutton'>View All</a>").openPopup();
               var umeda = L.marker([34.70628451983468, 135.498421355823], {icon: umedaIcon}).bindPopup("<p>Umeda</p><a href='./students-exploration/2025/06/04/25-Umeda.html' class='popupbutton'>View All</a>").openPopup();
               var kamo = L.marker([34.98656019141252, 135.7680009888159], {icon: kamoIcon}).bindPopup("<p>Kamo River</p><a href='./students-exploration/2025/06/04/25-KamoRiver.html' class='popupbutton'>View All</a>").openPopup();
+              var nintendo = L.marker([34.893362201030655, 135.78417672883538], {icon: nintendoIcon}).bindPopup("<p>Nintendo’s Museum</p><a href='./students-exploration/2025/06/06/25-NintendoMuseum.html' class='popupbutton'>View All</a>").openPopup();
+              var unagi = L.marker([34.66900925474452, 135.4998282711659], {icon: unagiIcon}).bindPopup("<p>Unagi</p><a href='./students-exploration/2025/06/04/25-KamoRiver.html' class='popupbutton'>View All</a>").openPopup();
+              var crab = L.marker([34.66906219845179, 135.4998711865128], {icon: crabIcon}).bindPopup("<p>Osaka's Crab Craze</p><a href='./students-exploration/2025/06/04/25-KamoRiver.html' class='popupbutton'>View All</a>").openPopup();
               
               //which attractions are visited on that day
               var dayOne = L.layerGroup([gyutan,okonomiyaki]); 
-              var dayTwo = L.layerGroup([kUni, oUni,park70]);
+              var dayTwo = L.layerGroup([kUni, oUni,park70,crab,unagi]);
               var dayThree = L.layerGroup([kyUni, kanAI,umeda,kamo]);
               var dayFour = L.layerGroup([oExpo,castlePark,suzuka,katsuoji,Wakayama]);
-              var dayFive = L.layerGroup([]);
+              var dayFive = L.layerGroup([nintendo]);
 
               //the main map
               var map = L.map('map', {
