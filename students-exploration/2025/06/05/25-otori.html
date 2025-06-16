@@ -146,14 +146,27 @@
                         .markdown video {
                             max-width: 60%;
                         }
+
+                        .image-row {
+                            display: flex;
+                            justify-content: center;
+                            /* Center the images horizontally */
+                            align-items: center;
+                            /* Align images vertically */
+                            gap: 10px;
+                            /* Optional: adds space between images */
+                        }
+
                     }
 
                     /* Adjust image size for medium screens */
                     @media (min-width: 768px) and (max-width: 1023px) {
-
-                        .markdown img,
-                        .markdown video {
-                            max-width: 70%;
+                        .image-row {
+                            display: flex;
+                            overflow: scroll;
+                            /* Align images vertically */
+                            gap: 10px;
+                            /* Optional: adds space between images */
                         }
                     }
 
@@ -162,7 +175,16 @@
 
                         .markdown img,
                         .markdown video {
-                            max-width: 80%;
+                            /* max-width: 100%; */
+                            max-height: 60vw;
+                        }
+
+                        .image-row {
+                            display: flex;
+                            overflow: scroll;
+                            /* Align images vertically */
+                            gap: 10px;
+                            /* Optional: adds space between images */
                         }
                     }
 
@@ -170,6 +192,33 @@
                         margin-left: auto;
                         margin-right: auto;
                     }
+
+                    /* Figure */
+                    figure {
+                        margin: 20px 0;
+                        /* Adds spacing around each figure */
+                        text-align: center;
+                        /* Centers the content */
+                    }
+
+                    figcaption {
+                        color: #666;
+                        /* Gray text color for captions */
+                        font-size: 0.9em;
+                        /* Smaller font size for captions */
+                    }
+
+                    .googleMap {
+                        width: 100%;
+                        border: 0;
+                        height: 40vh;
+                        max-width: 1000px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        padding: 0px;
+                        display: flex;
+                    }
+
                 </style>
                 <div class="">
                     <div class="cityu-content content-color-default">
@@ -177,6 +226,7 @@
                     </div>
                 </div>
                 <div class="col-md-9 markdown content-color-default">
+                    <img src="../../../..//assets/img/contents/25-otori/cover.jpg" alt="" />
 
                     <h2>Ōtori Taisha</h2>
                     <p>
@@ -198,6 +248,7 @@
                     </p>
 
                     <img src="../../../..//assets/img/contents/25-otori/3.jpg" alt="" />
+
                     <div class="image-row">
                         <img src="../../../..//assets/img/contents/25-otori/4.jpg" alt="" />
                         <img src="../../../..//assets/img/contents/25-otori/5.jpg" alt="" />
