@@ -735,6 +735,10 @@
                       target="_blank">A post shared by CSDept@CityU (@hkcityucs)</a>
                   </p>
                 </div>
+              
+                <div class="insta-fallback">
+                  <p>Instagram content cannot be loaded, please check your device</p>
+                </div>
               </blockquote>
               <script async src="//www.instagram.com/embed.js"></script>
               <blockquote class="instagram-media" data-instgrm-captioned
@@ -938,6 +942,10 @@
                       target="_blank">A post shared by CSDept@CityU (@hkcityucs)</a>
                   </p>
                 </div>
+
+                <div class="insta-fallback">
+                  <p>Instagram content cannot be loaded, please check your device</p>
+                </div>
               </blockquote>
               <script async src="//www.instagram.com/embed.js"></script>
               <blockquote class="instagram-media" data-instgrm-captioned
@@ -1076,8 +1084,35 @@
                       target="_blank">A post shared by CSDept@CityU (@hkcityucs)</a>
                   </p>
                 </div>
+
+                <div class="insta-fallback">
+                  <p>Instagram content cannot be loaded, please check your device</p>
+                </div>
               </blockquote>
               <script async src="//www.instagram.com/embed.js"></script>
+
+              <style>
+                .insta-fallback {
+                  display: block;
+                  padding: 1rem;
+                  text-align: center;
+                  background: #f4f4f4;
+                  font-size: 0.9rem;
+                }
+
+                .rendered .insta-fallback {
+                  display: none;
+                }
+              </style>
+
+              <script async src="https://www.instagram.com/embed.js" onload="
+                setTimeout(function () {
+                  var insta = document.getElementById('insta1');
+                  if (insta && insta.querySelector('iframe')) {
+                    insta.classList.add('rendered');
+                  }
+                }, 1500);
+              "></script>
           </div>
 
           <div class="cityu-divider-1 aos-init aos-animate" style="margin-bottom: 0.5rem" data-aos="flip-up"
@@ -1105,6 +1140,9 @@
                 </p>
                 — CSDept HKCityU (@CityUCS)
                 <a href="https://twitter.com/CityUCS/status/1933011283407970788?ref_src=twsrc%5Etfw">June 12, 2025</a>
+                <div class="twitter-fallback">
+                  <p>Fail to load Twitter. Please check your device</p>
+                </div>
               </blockquote>
               <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -1127,6 +1165,9 @@
                 </p>
                 — CSDept HKCityU (@CityUCS)
                 <a href="https://twitter.com/CityUCS/status/1933430391236669733?ref_src=twsrc%5Etfw">June 13, 2025</a>
+                <div class="twitter-fallback">
+                  <p>Fail to load Twitter. Please check your device</p>
+                </div>
               </blockquote>
               <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -1148,8 +1189,24 @@
               </p>
               — CSDept HKCityU (@CityUCS)
               <a href="https://twitter.com/CityUCS/status/1933711001855406152?ref_src=twsrc%5Etfw">June 14, 2025</a>
+            <div class="twitter-fallback">
+              <p>Fail to load Twitter. Please check your device</p>
+            </div>
             </blockquote>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+            <style>
+              /* Hide fallback after Twitter's script loads and enhances the blockquote */
+              .twitter-tweet.rendered .twitter-fallback {
+                display: none;
+              }
+            </style>
+
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" onload="
+            document.querySelectorAll('.twitter-tweet').forEach(function(el) {
+              el.classList.add('rendered');
+            });
+          "></script>
           </div>
 
           <div class="cityu-divider-2 aos-init aos-animate" style="margin-bottom: 0.5rem" data-aos="flip-up"
@@ -1177,7 +1234,7 @@
                 margin-right: auto;
                 display: flex;
                 max-width: 100%;
-              " scrolling="no" frameborder="0" allowfullscreen="true"
+              " scrolling="no" frameborder="0" allowfullscreen="true" onerror="this.style.display='none'; document.getElementById('fb-fallback').style.display='block';"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
             </iframe>
 
@@ -1191,7 +1248,7 @@
                 margin-right: auto;
                 display: flex;
                 max-width: 100%;
-              " scrolling="no" frameborder="0" allowfullscreen="true"
+              " scrolling="no" frameborder="0" allowfullscreen="true" onerror="this.style.display='none'; document.getElementById('fb-fallback').style.display='block';"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
             </iframe>
 
@@ -1205,9 +1262,11 @@
                 margin-right: auto;
                 display: flex;
                 max-width: 100%;
-              " scrolling="no" frameborder="0" allowfullscreen="true"
+              " onerror="this.style.display='none'; document.getElementById('fb-fallback').style.display='block';" scrolling="no" frameborder="0" allowfullscreen="true"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
             </iframe>
+              <div id="fb-fallback" style="display: none; text-align: center; padding: 1rem; border: 1px solid #ccc; border-radius: 8px;">
+              <p>Facebook content could not be loaded. Please check your device</p></div>
           </div>
 
           <div class="cityu-divider-1 aos-init aos-animate" style="margin-bottom: 0.5rem" data-aos="flip-up"
