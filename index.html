@@ -1535,12 +1535,26 @@
                 iconAnchor: [70, 140], // Center bottom anchor point
                 popupAnchor: [0, -140] // Popup appears above the icon
               });
+              var otoriIcon =  L.icon({//the icon of those GPS markers
+                  iconUrl: './assets/img/gpsIcon/Otori.png', //icon in the file path
+
+                iconSize: [140, 140],
+                iconAnchor: [70, 140], // Center bottom anchor point
+                popupAnchor: [0, -140] // Popup appears above the icon
+              });
+              var kuromonIcon =  L.icon({//the icon of those GPS markers
+                  iconUrl: './assets/img/gpsIcon/kuromon.png', //icon in the file path
+
+                iconSize: [140, 140],
+                iconAnchor: [70, 140], // Center bottom anchor point
+                popupAnchor: [0, -140] // Popup appears above the icon
+              });
 
 
                 
               //marker of those attractions
               var kUni = L.marker([34.7739528, 135.5100389], {icon: KansaiUIcon}).bindPopup("<p>Kansai University Senriyama Campus</p><a href='./academic-visit/2025/06/04/25-KansaiU.html' class='popupbutton'>View All</a>").openPopup();
-              var oUni = L.marker([34.8220139, 135.5244676], {icon: OsakaUIcon}).bindPopup("<p>The University of Osaka</p><a href='./academic-visit/2025/06/04/25-OsakaU.html' class='popupbutton'>View All</a>").openPopup();
+              var oUni = L.marker([34.80635313526907, 135.45408289815484], {icon: OsakaUIcon}).bindPopup("<p>The University of Osaka</p><a href='./academic-visit/2025/06/04/25-OsakaU.html' class='popupbutton'>View All</a>").openPopup();
               var kyUni = L.marker([35.026212, 135.780842], {icon: KyotoUIcon}).bindPopup("<p>Kyoto University Yoshida Campus</p><a href='./academic-visit/2025/06/04/25-KyotoU.html' class='popupbutton'>View All</a>").openPopup();
               var kanAI = L.marker([34.634845, 135.456624], {icon: KanadeviaIcon}).bindPopup("<p>Kanadevia A.I/TEC</p><a href='./academic-visit/2025/06/04/25-KanadeviaAITec.html' class='popupbutton'>View All</a>").openPopup();
               var oExpo = L.marker([34.653232111112565, 135.38297960652858], {icon: ExpoIcon}).bindPopup("<p>Osaka Expo</p><a href='./students-exploration/2025/06/05/25-Expo.html' class='popupbutton'>View All</a>").openPopup();
@@ -1556,13 +1570,15 @@
               var nintendo = L.marker([34.893362201030655, 135.78417672883538], {icon: nintendoIcon}).bindPopup("<p>Nintendo’s Museum</p><a href='./students-exploration/2025/06/06/25-NintendoMuseum.html' class='popupbutton'>View All</a>").openPopup();
               var unagi = L.marker([34.66900925474452, 135.4998282711659], {icon: unagiIcon}).bindPopup("<p>Unagi</p><a href='./students-exploration/2025/06/03/25-unagi.html' class='popupbutton'>View All</a>").openPopup();
               var crab = L.marker([34.66906219845179, 135.4998711865128], {icon: crabIcon}).bindPopup("<p>Osaka's Crab Craze</p><a href='./students-exploration/2025/06/03/25-crab.html' class='popupbutton'>View All</a>").openPopup();
+              var otori = L.marker([34.55283831234267, 135.46651159567207], {icon: crabIcon}).bindPopup("<p>Ōtori Taisha</p><a href='./students-exploration/2025/06/05/25-otori.html' class='popupbutton'>View All</a>").openPopup();
+              var kuromon = L.marker([34.66906219845179, 135.4998711865128], {icon: kuromonIcon}).bindPopup("<p>Kuromon Market</p><a href='./students-exploration/2025/06/06/25-toTokyo.html' class='popupbutton'>View All</a>").openPopup();
               
               //which attractions are visited on that day
               var dayOne = L.layerGroup([gyutan,okonomiyaki]); 
               var dayTwo = L.layerGroup([kUni, oUni,park70,crab,unagi]);
               var dayThree = L.layerGroup([kyUni, kanAI,umeda,kamo]);
-              var dayFour = L.layerGroup([oExpo,castlePark,suzuka,katsuoji,Wakayama]);
-              var dayFive = L.layerGroup([nintendo]);
+              var dayFour = L.layerGroup([oExpo,castlePark,suzuka,katsuoji,Wakayama,otori]);
+              var dayFive = L.layerGroup([nintendo,kuromon]);
 
               //the main map
               var map = L.map('map', {
@@ -1599,7 +1615,12 @@
                 { marker: okonomiyaki, type: 'culture' },
                 { marker: park70, type: 'culture' },
                 { marker: umeda, type: 'culture' },
-                { marker: kamo, type: 'culture' }
+                { marker: kamo, type: 'culture' },
+                { marker: nintendo, type: 'culture' },
+                { marker: unagi, type: 'culture' },
+                { marker: crab, type: 'culture' },
+                { marker: otori, type: 'culture' },
+                { marker: kuromon, type: 'culture' }
 
               ];
 
