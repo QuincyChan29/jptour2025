@@ -1543,6 +1543,20 @@
                 iconAnchor: [70, 140], // Center bottom anchor point
                 popupAnchor: [0, -140] // Popup appears above the icon
               });
+              var toriIcon = L.icon({
+                  iconUrl: './assets/img/gpsIcon/Torikizoku.png', // You'll need to create this image
+                  iconSize: [140, 140],
+                  iconAnchor: [70, 140], // Center bottom anchor point
+                  popupAnchor: [0, -140] // Popup appears above the icon
+              });
+
+              // Second new icon - Dotonbori
+              var shubodaiIcon = L.icon({
+                  iconUrl: './assets/img/gpsIcon/shubodai.png', // You'll need to create this image
+                  iconSize: [140, 140],
+                  iconAnchor: [70, 140], // Center bottom anchor point
+                  popupAnchor: [0, -140] // Popup appears above the icon
+              });
 
 
                 
@@ -1567,10 +1581,12 @@
               var otori = L.marker([34.55283831234267, 135.46651159567207], {icon: otoriIcon}).bindPopup("<p>Ōtori Taisha</p><a href='./students-exploration/2025/06/05/25-otori.html' class='popupbutton'>View All</a>").openPopup();
               var kuromon = L.marker([34.66906219845179, 135.4998711865128], {icon: kuromonIcon}).bindPopup("<p>Kuromon Market</p><a href='./students-exploration/2025/06/06/25-toTokyo.html' class='popupbutton'>View All</a>").openPopup();
               var cosmo = L.marker([34.63814620430391, 135.41472607853328], {icon: cosmoIcon}).bindPopup("<p>Sakishima​ Cosmo Tower​ Observatory</p><a href='./students-exploration/2025/06/05/25-attractions.html' class='popupbutton'>View All</a>").openPopup();
+              var tori = L.marker([34.6645177, 135.4991134], {icon: toriIcon}).bindPopup("<p>Torikizoku</p><a href='./students-exploration/2025/06/02/25-Torikizoku.html' class='popupbutton'>View All</a>").openPopup();
+              var shubodai = L.marker([34.8317905, 135.4246503], {icon: shubodaiIcon}).bindPopup("<p>Shubodai</p><a href='./students-exploration/2025/06/04/25-Shubodai.html' class='popupbutton'>View All</a>").openPopup();
               
               //which attractions are visited on that day
-              var dayOne = L.layerGroup([gyutan,okonomiyaki]); 
-              var dayTwo = L.layerGroup([kUni, oUni,park70,crab,unagi]);
+              var dayOne = L.layerGroup([gyutan,okonomiyaki,tori]); 
+              var dayTwo = L.layerGroup([kUni, oUni,park70,crab,unagi,shubodai]);
               var dayThree = L.layerGroup([kyUni, kanAI,umeda,kamo]);
               var dayFour = L.layerGroup([oExpo,castlePark,suzuka,katsuoji,Wakayama,otori,cosmo]);
               var dayFive = L.layerGroup([nintendo,kuromon]);
@@ -1615,7 +1631,10 @@
                 { marker: unagi, type: 'culture' },
                 { marker: crab, type: 'culture' },
                 { marker: otori, type: 'culture' },
-                { marker: kuromon, type: 'culture' }
+                { marker: kuromon, type: 'culture' },
+                { marker: cosmo, type: 'culture' },
+                { marker: tori, type: 'company' },
+                { marker: shubodai, type: 'culture' }
 
               ];
 
