@@ -1568,6 +1568,13 @@
                   iconAnchor: [70, 140], // Center bottom anchor point
                   popupAnchor: [0, -140] // Popup appears above the icon
               });
+              var usjIcon = L.icon({//the icon of those GPS markers
+                  iconUrl: './assets/img/gpsIcon/USJ.png', //icon in the file path
+
+                iconSize: [140, 140], 
+                iconAnchor: [70, 140], // Center bottom anchor point
+                popupAnchor: [0, -140] // Popup appears above the icon
+              });
 
 
                 
@@ -1594,12 +1601,13 @@
               var cosmo = L.marker([34.63814620430391, 135.41472607853328], {icon: cosmoIcon}).bindPopup("<p>Sakishima​ Cosmo Tower​ Observatory</p><a href='./students-exploration/2025/06/05/25-attractions.html' class='popupbutton'>View All</a>").openPopup();
               var tori = L.marker([34.6645177, 135.4991134], {icon: toriIcon}).bindPopup("<p>Torikizoku</p><a href='./students-exploration/2025/06/02/25-Torikizoku.html' class='popupbutton'>View All</a>").openPopup();
               var shubodai = L.marker([34.8317905, 135.4246503], {icon: shubodaiIcon}).bindPopup("<p>Shubodai</p><a href='./students-exploration/2025/06/04/25-Shubodai.html' class='popupbutton'>View All</a>").openPopup();
+              var usj = L.marker([34.66593267728999, 135.43225412375284], {icon: usjIcon}).bindPopup("<p>Universal Studios Japan</p><a href='./students-exploration/2025/06/05/25-USJ.html' class='popupbutton'>View All</a>").openPopup();
               
               //which attractions are visited on that day
               var dayOne = L.layerGroup([gyutan,okonomiyaki,tori]); 
               var dayTwo = L.layerGroup([kUni, oUni,park70,crab,unagi,shubodai]);
               var dayThree = L.layerGroup([kyUni, kanAI,umeda,kamo]);
-              var dayFour = L.layerGroup([oExpo,castlePark,suzuka,katsuoji,Wakayama,otori,cosmo]);
+              var dayFour = L.layerGroup([oExpo,castlePark,suzuka,katsuoji,Wakayama,otori,cosmo,usj]);
               var dayFive = L.layerGroup([nintendo,kuromon]);
 
               //the main map
@@ -1645,7 +1653,8 @@
                 { marker: kuromon, type: 'culture' },
                 { marker: cosmo, type: 'culture' },
                 { marker: shubodai, type: 'culture' },
-                { marker: tori, type: 'culture' }
+                { marker: tori, type: 'culture' },
+                { marker: usj, type: 'culture' }
               ];
 
               function showOnlyType(type) {
@@ -1960,6 +1969,13 @@
                 <h3>
                   <a class="post-link" href="./students-exploration/2025/06/05/25-attractions.html">
                     One-day Tour of Osaka Attractions
+                  </a>
+                </h3>
+              </li>
+              <li>
+                <h3>
+                  <a class="post-link" href="./students-exploration/2025/06/05/25-USJ.html">
+                    Super Nintendo World at USJ: A Gamer’s Dream Come True
                   </a>
                 </h3>
               </li>
