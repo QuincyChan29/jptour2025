@@ -139,7 +139,7 @@
         <!-- Carousel item1 1 -->
         <div class="carousel-item active">
           <img class="d-block w-100" src=".//assets/img/25-slide/1.webp" alt="" data-aos="zoom-out"
-            data-aos-duration="1000" />
+            data-aos-duration="1000" loading="lazy" decoding="async"/>
           <div class="carousel-caption" data-aos="fade-right" data-aos-duration="1500">
             <h3>
               <a href=".//prepare/meeting.html"class="text-white">Departure @ Hong Kong International Airport</a>
@@ -1598,7 +1598,7 @@
                 popupAnchor: [0, -140] // Popup appears above the icon
               });
               var toriIcon = L.icon({
-                  iconUrl: './assets/img/gpsIcon/Torikizoku.png', // You'll need to create this image
+                  iconUrl: './assets/img/gpsIcon/Torikizoku.webp', // You'll need to create this image
 
                   iconSize: [140, 140],
                   iconAnchor: [70, 140], // Center bottom anchor point
@@ -1607,14 +1607,14 @@
 
               // Second new icon - Dotonbori
               var shubodaiIcon = L.icon({
-                  iconUrl: './assets/img/gpsIcon/shubodai.png', // You'll need to create this image
+                  iconUrl: './assets/img/gpsIcon/shubodai.webp', // You'll need to create this image
 
                   iconSize: [140, 140],
                   iconAnchor: [70, 140], // Center bottom anchor point
                   popupAnchor: [0, -140] // Popup appears above the icon
               });
               var usjIcon = L.icon({//the icon of those GPS markers
-                  iconUrl: './assets/img/gpsIcon/USJ.png', //icon in the file path
+                  iconUrl: './assets/img/gpsIcon/USJ.webp', //icon in the file path
 
                 iconSize: [140, 140], 
                 iconAnchor: [70, 140], // Center bottom anchor point
@@ -1662,7 +1662,7 @@
                   layers: [dayOne,dayTwo,dayThree,dayFour,dayFive] //which layers/days will be enabled as default
               });
   
-              L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.webp', {
+              L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                   maxZoom: 19,
                   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
               }).addTo(map);
