@@ -1207,7 +1207,6 @@
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
             <style>
-              /* Hide fallback after Twitter's script loads and enhances the blockquote */
               .twitter-tweet.rendered .twitter-fallback {
                 display: none;
               }
@@ -1238,6 +1237,7 @@
             <!-- First Post (shorter content – adjusted height) -->
             <iframe
               src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCityU.CSDept%2Fposts%2Fpfbid0AGtqGXuYZjh49wE6x42kcNJwLrGvnoHDtaTyGS1iHTwWSCnTEUWupUFjNTeJYmASl&show_text=true&width=500"
+              id="fb1"
               width="500" height="450" style="
                 border: none;
                 overflow: hidden;
@@ -1245,13 +1245,14 @@
                 margin-right: auto;
                 display: flex;
                 max-width: 100%;
-              " scrolling="no" frameborder="0" allowfullscreen="true" onerror="this.style.display='none'; document.getElementById('fb-fallback').style.display='block';"
+              " scrolling="no" frameborder="0" allowfullscreen="true" 
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
             </iframe>
 
             <!-- Second Post -->
             <iframe
               src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCityU.CS%2Fposts%2Fpfbid0HszdrLvN6KWfV7ivheiuHFMhU1rt6A9kPZQVm4SNFPn9xpef8v6k9uKwvgvtLUDql&show_text=true&width=500"
+              id="fb2"
               width="500" height="721" style="
                 border: none;
                 overflow: hidden;
@@ -1259,12 +1260,13 @@
                 margin-right: auto;
                 display: flex;
                 max-width: 100%;
-              " scrolling="no" frameborder="0" allowfullscreen="true" onerror="this.style.display='none'; document.getElementById('fb-fallback').style.display='block';"
+              " scrolling="no" frameborder="0" allowfullscreen="true" 
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
             </iframe>
 
             <!-- Third Post -->
             <iframe
+              id="fb3"
               src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCityU.CS%2Fposts%2Fpfbid02jjEEesk5drwAKk6tzHSRMxqmEbXha7SQtE3o6zZEXeFnwMk4bTbLD8wHHUgEmt31l&show_text=true&width=500"
               width="500" height="721" style="
                 border: none;
@@ -1273,13 +1275,47 @@
                 margin-right: auto;
                 display: flex;
                 max-width: 100%;
-              " onerror="this.style.display='none'; document.getElementById('fb-fallback').style.display='block';" scrolling="no" frameborder="0" allowfullscreen="true"
+              " scrolling="no" frameborder="0" allowfullscreen="true"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
             </iframe>
-              <div id="fb-fallback" style="display: none; text-align: center; padding: 1rem; border: 1px solid #ccc; border-radius: 8px;">
-              <p>Facebook content could not be loaded. Please check your device</p></div>
-          </div>
 
+            <div id="fb-fallback" style="display: none; text-align: center; padding: 1rem; border: 1px solid #ccc; border-radius: 8px;">
+              <p>Facebook content could not be loaded. Please check your device or network.</p>
+            </div>
+          </div>
+          <script>
+              function checkFacebookEmbeds() {
+                const fb1 = document.getElementById('fb1');
+                const fb2 = document.getElementById('fb2');
+                const fb3 = document.getElementById('fb3');
+                const fallback = document.getElementById('fb-fallback');
+
+                let allFailed = 0;
+
+                [fb1, fb2, fb3].forEach((iframe) => {
+                  try {
+                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    if (!iframeDoc || iframeDoc.body.innerHTML.trim() === '') {
+                      allFailed++;
+                    }
+                  } catch (e) {
+                    allFailed++;
+                  }
+                });
+
+                if (allFailed === 3) {
+                  fallback.style.display = 'block';
+                  fb1.style.display = 'none';
+                  fb2.style.display = 'none';
+                  fb3.style.display = 'none';
+                }
+              }
+
+              // Wait until iframe attempts to load (2–3 seconds)
+              window.addEventListener('load', () => {
+                setTimeout(checkFacebookEmbeds, 3000);
+              });
+            </script>
           <div class="cityu-divider-1 aos-init aos-animate" style="margin-bottom: 0.5rem" data-aos="flip-up"
             data-aos-duration="1500"></div>
 
