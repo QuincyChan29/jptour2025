@@ -748,7 +748,7 @@
                 </div>
               
                 <div class="insta-fallback">
-                  <p>Instagram content cannot be loaded, please check your device or network</p>
+                  <p>Instagram content cannot be loaded, please check your device</p>
                 </div>
               </blockquote>
               <script async src="//www.instagram.com/embed.js"></script>
@@ -955,7 +955,7 @@
                 </div>
 
                 <div class="insta-fallback">
-                  <p>Instagram content cannot be loaded, please check your device or network</p>
+                  <p>Instagram content cannot be loaded, please check your device</p>
                 </div>
               </blockquote>
               <script async src="//www.instagram.com/embed.js"></script>
@@ -1097,7 +1097,7 @@
                 </div>
 
                 <div class="insta-fallback">
-                  <p>Instagram content cannot be loaded, please check your device or network</p>
+                  <p>Instagram content cannot be loaded, please check your device</p>
                 </div>
               </blockquote>
               <script async src="//www.instagram.com/embed.js"></script>
@@ -1152,7 +1152,7 @@
                 — CSDept HKCityU (@CityUCS)
                 <a href="https://twitter.com/CityUCS/status/1933011283407970788?ref_src=twsrc%5Etfw">June 12, 2025</a>
                 <div class="twitter-fallback">
-                  <p>Fail to load Twitter. please check your device or network</p>
+                  <p>Fail to load Twitter. Please check your device</p>
                 </div>
               </blockquote>
               <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -1177,7 +1177,7 @@
                 — CSDept HKCityU (@CityUCS)
                 <a href="https://twitter.com/CityUCS/status/1933430391236669733?ref_src=twsrc%5Etfw">June 13, 2025</a>
                 <div class="twitter-fallback">
-                  <p>Fail to load Twitter. please check your device or network</p>
+                  <p>Fail to load Twitter. Please check your device</p>
                 </div>
               </blockquote>
               <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -1201,12 +1201,13 @@
               — CSDept HKCityU (@CityUCS)
               <a href="https://twitter.com/CityUCS/status/1933711001855406152?ref_src=twsrc%5Etfw">June 14, 2025</a>
             <div class="twitter-fallback">
-              <p>Fail to load Twitter. please check your device or network</p>
+              <p>Fail to load Twitter. Please check your device</p>
             </div>
             </blockquote>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
             <style>
+              /* Hide fallback after Twitter's script loads and enhances the blockquote */
               .twitter-tweet.rendered .twitter-fallback {
                 display: none;
               }
@@ -1237,8 +1238,7 @@
             <!-- First Post (shorter content – adjusted height) -->
             <iframe
               src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCityU.CSDept%2Fposts%2Fpfbid0AGtqGXuYZjh49wE6x42kcNJwLrGvnoHDtaTyGS1iHTwWSCnTEUWupUFjNTeJYmASl&show_text=true&width=500"
-              id="fb1"
-              width="500" height="450" style="
+              width="500" height="450" class="fb-frame" style="
                 border: none;
                 overflow: hidden;
                 margin-left: auto;
@@ -1252,8 +1252,7 @@
             <!-- Second Post -->
             <iframe
               src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCityU.CS%2Fposts%2Fpfbid0HszdrLvN6KWfV7ivheiuHFMhU1rt6A9kPZQVm4SNFPn9xpef8v6k9uKwvgvtLUDql&show_text=true&width=500"
-              id="fb2"
-              width="500" height="721" style="
+              width="500" height="721" class="fb-frame" style="
                 border: none;
                 overflow: hidden;
                 margin-left: auto;
@@ -1266,9 +1265,8 @@
 
             <!-- Third Post -->
             <iframe
-              id="fb3"
               src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCityU.CS%2Fposts%2Fpfbid02jjEEesk5drwAKk6tzHSRMxqmEbXha7SQtE3o6zZEXeFnwMk4bTbLD8wHHUgEmt31l&show_text=true&width=500"
-              width="500" height="721" style="
+              width="500" height="721" class="fb-frame" style="
                 border: none;
                 overflow: hidden;
                 margin-left: auto;
@@ -1278,36 +1276,53 @@
               " scrolling="no" frameborder="0" allowfullscreen="true"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
             </iframe>
-
-            <div id="fb-fallback" style="display: none; text-align: center; padding: 1rem; border: 1px solid #ccc; border-radius: 8px;">
-              <p>Facebook content could not be loaded. please check your device or network or network.</p>
-            </div>
+              <div id="fb-fallback" style="display: none; text-align: center; padding: 1rem; border: 1px solid #ccc; border-radius: 8px;">
+              <p>Facebook content could not be loaded. Please check your device</p></div>
           </div>
+
+
           <script>
-            const iframes = [
-              document.getElementById('fb1'),
-              document.getElementById('fb2'),
-              document.getElementById('fb3')
-            ];
-            const fallback = document.getElementById('fb-fallback');
+  function testFacebookAvailable(callback, timeout = 3000) {
+    const img = new Image();
+    let timedOut = false;
 
-            let loadedCount = 0;
+    // Add unique query to prevent caching
+    img.src = "https://www.facebook.com/favicon.ico?_=" + Date.now();
 
-            iframes.forEach((frame) => {
-              frame.onload = () => {
-                loadedCount++;
-              };
-            });
+    const timer = setTimeout(() => {
+      timedOut = true;
+      img.src = ''; // Cancel image load
+      callback(false); // Assume Facebook is blocked
+    }, timeout);
 
-            window.addEventListener('load', () => {
-              setTimeout(() => {
-                if (loadedCount === 0) {
-                  fallback.style.display = 'block';
-                  iframes.forEach(frame => frame.style.display = 'none');
-                }
-              }, 3000); 
-            });
-          </script>
+    img.onload = () => {
+      if (!timedOut) {
+        clearTimeout(timer);
+        callback(true); // Facebook reachable
+      }
+    };
+
+    img.onerror = () => {
+      if (!timedOut) {
+        clearTimeout(timer);
+        callback(false); // Facebook not reachable
+      }
+    };
+  }
+
+  // Run on load
+  window.addEventListener('load', () => {
+    testFacebookAvailable((facebookOk) => {
+      if (!facebookOk) {
+        // Hide iframes
+        document.querySelectorAll('.fb-frame').forEach(el => el.style.display = 'none');
+        // Show fallback
+        document.getElementById('fb-fallback').style.display = 'block';
+      }
+    });
+  });
+</script>
+
           <div class="cityu-divider-1 aos-init aos-animate" style="margin-bottom: 0.5rem" data-aos="flip-up"
             data-aos-duration="1500"></div>
 
